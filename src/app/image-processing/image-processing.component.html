@@ -1,0 +1,11 @@
+<ActionBar title="Procesamiento de Imágenes"></ActionBar>
+
+<StackLayout class="p-4">
+  <Button text="Tomar Foto" (tap)="onTakePicture()" class="btn btn-primary mb-4"></Button>
+  
+  <Image *ngIf="imageSrc" [src]="imageSrc" stretch="aspectFit" height="200" class="mb-4"></Image>
+  
+  <Button *ngIf="imageSrc" text="Procesar Imagen" (tap)="onProcessImage()" class="btn btn-secondary mb-4"></Button>
+  
+  <Image *ngIf="processedImageSrc" [src]="processedImageSrc" stretch="aspectFit" height="200"></Image>
+</StackLayout>

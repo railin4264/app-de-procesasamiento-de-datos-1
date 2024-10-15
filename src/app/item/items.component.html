@@ -1,0 +1,12 @@
+<ActionBar title="My App"> </ActionBar>
+
+<GridLayout rows="auto, *">
+  <Button text="Ir a Procesamiento de Imágenes" [nsRouterLink]="['/image-processing']" row="0" class="btn btn-primary m-4"></Button>
+  <ListView [items]="items" row="1">
+    <ng-template let-item="item">
+      <StackLayout [nsRouterLink]="['/item', item.id]">
+        <Label [text]="item.name" class="text-lg text-gray-500 p-4"></Label>
+      </StackLayout>
+    </ng-template>
+  </ListView>
+</GridLayout>
